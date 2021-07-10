@@ -1,0 +1,30 @@
+{% extends 'basetemp.html' %}
+
+{% block title %}
+    Home page
+{% endblock %}
+
+{% block content %}
+    {% if current_user.is_authenticated %}
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark" style="color:white">
+            <div class="col-md-5 p-lg-5 mx-auto my-5">
+                <img class="mb-4" src="https://i.kym-cdn.com/entries/icons/facebook/000/021/290/bounsa.jpg" alt="" height="200" length="200">
+                <h1 class="display-4 font-weight-normal">BlogSite</h1>
+                <p class="lead font-weight-normal">Welcome to BlogSite, {{ current_user.username }}!</p>
+                <a class="btn btn-primary" href="{{ url_for('write_blog') }}">Get ready to blog.</a>
+            </div>
+            <div class="product-device box-shadow d-none d-md-block"></div>
+            <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+        </div>
+    {% else %}
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark" style="color:white">
+            <div class="col-md-5 p-lg-5 mx-auto my-5">
+                <h1 class="display-4 font-weight-normal">BlogSite</h1>
+                <p class="lead font-weight-normal">Start blogging by clicking on the link below</p>
+                <a class="btn btn-primary" href="{{ url_for('login_page') }}">Get Started</a>
+            </div>
+            <div class="product-device box-shadow d-none d-md-block"></div>
+            <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+        </div>
+    {% endif %}
+{% endblock %}

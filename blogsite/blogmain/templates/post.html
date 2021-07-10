@@ -1,0 +1,18 @@
+{% extends 'basetemp.html' %}
+
+{% block title %}
+     Submit Blog
+{% endblock %}
+
+{% block content %}
+   <h1>View Blogs here</h1>
+   <br>
+      <div class="shadow lg p-3 mb-5 bg-body rounded">
+         <h1>{{ post.title }}</h1>
+         <small>By: {{ post.author }}<br>
+         {{ post.date_posted }}<br>
+         {{ post.content }}</small><br><br>
+      </div>
+      <br>
+      <a class="btn btn-outline-secondary" role="button" href="{{ url_for('view_blogs') }}">Go back</a>
+{% endblock %}

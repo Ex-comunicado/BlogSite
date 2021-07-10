@@ -1,0 +1,28 @@
+{% extends 'basetemp.html' %}
+
+{% block title %}
+     Submit Blog
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <form method="POST" class="form-register" style="color:white">
+        {{ form.hidden_tag() }}
+        <div class="shadow lg p-3 mb-5 bg-body rounded">
+        {{ form.title.label() }}
+        {{ form.title(class="form-control", placeholder="Title") }}
+        <br>
+        {{ form.author.label() }}
+        {{ form.author(class="form-control", placeholder="Author") }}
+        <br>
+        {{ form.slug.label() }}
+        {{ form.slug(class="form-control", placeholder="Slug") }}
+        <br>
+        {{ form.content.label() }}
+        {{ form.content(class="form-control", placeholder="Content", rows="5") }}
+        <br>
+        {{ form.submit(class="btn btn-primary") }}
+    </form>
+</div>
+      <a class="btn btn-outline-secondary" role="button" href="{{ url_for('view_blogs') }}">Go back</a>
+{% endblock %}

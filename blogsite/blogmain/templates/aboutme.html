@@ -1,0 +1,32 @@
+{% extends 'basetemp.html' %}
+{% block title %}
+    About me!
+{% endblock %}
+
+{% block content %}
+    <br>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-left bg-dark" style="color:white">
+        <p>Hi, this website is developed by Kathir Sudan, a final year Computer Science student specializing in Cybersecurity and Forensics.</p>
+        {% if name %}
+            <h1>Hello {{ name }}, it is a pleasure to meet you. Welcome to my website.</h1>
+        {% else %}
+            <p>What is your name?</p>
+            <form method="POST" class="form-register">
+                {{ form.hidden_tag() }}
+
+                {{ form.name.label(class="form-label") }}
+                {{ form.name(class="form-control") }}
+                <br>
+                {{ form.submit(class="btn btn-primary") }}
+            </form>
+        {% endif %}
+        <br>
+        <p>Thank you for taking the time for checking out this website I developed.</p>
+        <p>The web framework I used for developing this website is Python Flask, which gave me a lot of independence to develop connections among the web pages.</p>
+        <p>Along with the framework, I used jinja2 to go along with Python Flask. The end result is infront of you.</p>
+        <p>I believe this to be only the beginning. I have planned a bigger project for which this was the baseline. Stay Tuned to find out what it is.</p>
+    <div class="product-device box-shadow d-none d-md-block"></div>
+    <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+</div>
+
+{% endblock %}

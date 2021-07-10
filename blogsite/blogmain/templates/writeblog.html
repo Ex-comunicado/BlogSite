@@ -1,0 +1,31 @@
+{% extends 'basetemp.html' %}
+
+{% block title %}
+     Submit Blog
+{% endblock %}
+
+{% block content %}
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-left bg-dark" style="color:white">
+    <form method="POST" class="form-register" style="color:white">
+        {{ form.hidden_tag() }}
+    <h1 class="h3 mb-3 font-weight-normal">
+        Jot down your thoughts.
+    </h1>
+        {{ form.title.label() }}
+        {{ form.title(class="form-control", placeholder="Title") }}
+        <br>
+        {{ form.author.label() }}
+        {{ form.author(class="form-control", placeholder="Author") }}
+        <br>
+        {{ form.slug.label() }}
+        {{ form.slug(class="form-control", placeholder="Slug") }}
+        <br>
+        {{ form.content.label() }}
+        {{ form.content(class="form-control", placeholder="Content", rows="5") }}
+        <br>
+        {{ form.submit(class="btn btn-primary") }}
+    </form>
+    <div class="product-device box-shadow d-none d-md-block"></div>
+    <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+</div>
+{% endblock %}

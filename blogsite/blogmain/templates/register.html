@@ -1,0 +1,37 @@
+{% extends 'basetemp.html' %}
+
+{% block title %}
+    Register Page
+{% endblock %}
+
+{% block content %}
+<br>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-left bg-dark" style="color:white">
+        <form method="POST" class="form-register" style="color:white">
+            {{ form.hidden_tag() }}
+        <center><img class="mb-4" src="https://www.conqueringchd.org/wp-content/uploads/2019/06/Register-Here-Button.png" alt="" height="100" length="100"></center>
+        <h1 class="h3 mb-3 font-weight-normal">
+            Please create your account!
+        </h1>
+        <div class="checkbox mb-3">
+            <h6>Already have an account?</h6>
+            <a class="btn btn-sm btn-secondary" href="{{ url_for('login_page') }}">Sign in Here</a>
+        </div>
+            {{ form.username.label() }}
+            {{ form.username(class="form-control", placeholder="Username") }}
+            <br>
+            {{ form.email_addr.label() }}
+            {{ form.email_addr(class="form-control", placeholder="E-mail Address") }}
+            <br>
+            {{ form.password1.label() }}
+            {{ form.password1(class="form-control", placeholder="Password") }}
+            <br>
+            {{ form.password2.label() }}
+            {{ form.password2(class="form-control", placeholder="Confirm password") }}
+            <br>
+            {{ form.submit(class="btn btn-primary") }}
+        </form>
+        <div class="product-device box-shadow d-none d-md-block"></div>
+        <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+    </div>
+{% endblock %}
