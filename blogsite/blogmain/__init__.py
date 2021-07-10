@@ -6,8 +6,8 @@ from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:password@localhost/users"
-app.config['SECRET_KEY'] = "Baababooey"
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://mysqlusername:mysqlpassword@localhost/users" #replace mysqlusername with your mysql username and mysqlpassword with your mysql password
+app.config['SECRET_KEY'] = "" #enter an encrypted key to generate anti-CSRF tokens
 
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
