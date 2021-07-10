@@ -49,4 +49,4 @@ db.create_all()
 ```ruby
 python run.py
 ```
-7. This will prompt you that a web server is now running at 127.0.0.1:5000. Input this address on your browser to access the Web Application.
+7. This will prompt you that a web server is now running at http://127.0.0.1:5000/. Input this address on your browser to access the Web Application.
