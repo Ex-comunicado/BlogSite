@@ -10,6 +10,8 @@ my_cursor = mydb.cursor()
 
 my_cursor.execute("CREATE DATABASE users")
 
+#you can erase this part below as it will only show you the updated databases
+#not mandatory to run but will act as proof that a database 'users' has been created
 my_cursor.execute("SHOW DATABASES")
 for db in my_cursor:
     print(db)
