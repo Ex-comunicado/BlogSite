@@ -35,11 +35,10 @@ my_cursor.execute("SHOW DATABASES")
 for db in my_cursor:
     print(db)
 ```
-3. After performing these operations, run the /blogsite/create_db.py using the command,
+3. After performing these operations, run the /blogsite/create_db.py using the command below. As mentioned, you can now delete this file if you wish to.
 ```ruby
 python create_db.py
 ```
-As mentioned, you can now delete this file if you wish to.
 4. Now, open a python shell using the command prompt in your Windows system.
 5. Type the following piece of python code in the python shell to create the tables required for the web application to run,
 ```ruby
