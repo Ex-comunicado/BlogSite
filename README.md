@@ -35,7 +35,7 @@ my_cursor.execute("SHOW DATABASES")
 for db in my_cursor:
     print(db)
 ```
-3. After performing these operations, run the /blogsite/create_db.py using the command below. As mentioned, you can now delete this file if you wish to.
+3. After performing these operations, run the /blogsite/create_db.py file using the command below. As mentioned, you can now delete this file if you wish to.
 ```ruby
 python create_db.py
 ```
